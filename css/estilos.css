@@ -1,0 +1,66 @@
+
+body
+{
+
+background: url();
+margin-left: 2%;
+}
+
+header 
+{	
+
+	margin-top: 4%;
+	margin-right: 2%;
+	margin-left: 2%;
+	text-align: center;
+
+}
+ 
+section, div
+{
+
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+#tabla_resultado_obra
+{
+
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+
+.pad-basic
+
+{
+padding:.5%; 
+	
+}
+
+.no-btm
+{
+	margin-bottom:0%;
+}
+
+.btn-der
+{
+	text-align: right;
+}
+
+#botones_superior{
+
+margin-left:2%; /*A la derecha deje un espacio de 0px*/
+
+height:50px; /*alto del div*/
+
+ }
+ 
+#atras{
+
+margin-right:2%; /*A la derecha deje un espacio de 0px*/
+
+height:50px; /*alto del div*/
+
+ }
+

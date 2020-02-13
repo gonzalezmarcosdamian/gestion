@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<!-- ESTILOS -->
+	<link href="css/estilos.css" rel="stylesheet">
+	
+	<!-- SCRIPTS JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<!-- Latest minified bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Latest minified bootstrap js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<title>GESTION DE OBRA</title>
+	
+</head>
+
+<body>
+	
+	<header>
+		<div class="alert alert-info">
+			<h2>Gestion de obras</h2>
+		</div>
+	</header> 
+	
+	<section>
+		<input type="text" name="busqueda" id="busqueda" placeholder="Buscar..."></p>
+		
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-formulario" 
+				onclick="new_obra()">Nueva obra
+		</button>
+		
+	</section>
+		
+	<section id="tabla_resultado">
+		<!-- AQUI SE DESPLEGARA NUESTRA TABLA DE OBRAS -->
+	</section>
+
+	<div id="formulario-obra"></div>
+</body>
+
+<!-- LOS MIOS .JS -->
+<script src="js/livesearch.js"></script>
+
+<script src="js/action.js"></script> 
+	<script type="text/javascript">
+
+		function new_obra() {
+			$.ajax({
+				url: "obra.php",
+				method: "post",
+				data: {  },
+				success: function(data) {
+					// alert(data);
+					$("#formulario-obra").html(data);
+					$("#modal-obra").modal("show");
+				}
+			});
+		}
+
+
+			
+	</script>
+
+</html>
+
